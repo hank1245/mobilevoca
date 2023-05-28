@@ -1,7 +1,5 @@
 import { useNavigate } from "react-router-dom";
 
-interface Props {}
-
 const Plus = () => {
   const navigate = useNavigate();
   const onClick = () => {
