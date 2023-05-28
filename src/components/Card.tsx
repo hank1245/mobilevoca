@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-interface Word {
+export interface Word {
   en: string;
   kr: string;
 }

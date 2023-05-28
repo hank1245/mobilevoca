@@ -1,16 +1,12 @@
 import { useState } from "react";
-import Card from "./Card";
+import Card, { Word } from "./Card";
 
 interface Props {}
 
-const Cards = () => {
-  const words = [
-    { en: "advent", kr: "출현" },
-    { en: "transmit", kr: "전달하다" },
-  ];
+const Cards = ({ data }: { data: Word[] }) => {
   return (
     <div className="flex flex-col items-center justify-center w-full">
-      {words.map((word, idx) => (
+      {data.map((word, idx) => (
         <Card data={word} key={idx} />
       ))}
     </div>

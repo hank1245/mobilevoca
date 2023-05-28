@@ -1,5 +1,7 @@
 import { useState } from "react";
 import Header from "./Header";
+import axios from "axios";
+import { HOST } from "../../constants";
 
 function Add() {
   const [input, setInput] = useState({
@@ -14,8 +16,9 @@ function Add() {
   const onKr = (e: React.ChangeEvent<HTMLInputElement>) => {
     setInput({ ...input, kr: e.target.value });
   };
-  const onSave = () => {
+  const onSave = async () => {
     if (input.en.length > 0 && input.kr.length > 1) {
+      await axios.post(`${HOST}/word`, input);
       setInput({ en: "", kr: "" });
       setToast(true);
       setTimeout(() => {
