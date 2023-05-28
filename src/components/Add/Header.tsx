@@ -27,6 +27,7 @@ const Header = ({ onSave }: Props) => {
         <button
           className="btn btn-ghost btn-circle text-secondary text-xl mr-2"
           onClick={onSave}
+          type="submit"
         >
           저장
         </button>
