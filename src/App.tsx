@@ -21,7 +21,7 @@ export default function App() {
     getData();
   }, []);
   return (
-    <div className="w-full h-full bg-netrual">
+    <div className="w-full bg-netrual">
       <NavBar />
       {data.length > 0 && <Cards data={data} />}
       <Plus />
